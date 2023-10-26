@@ -9,7 +9,7 @@ var { teacherModel, packageModel, clientModel, subjectModel, scheduleModel, paym
 var paymentRoutes = require('./routes/payment_routes'),
     scheduleRoutes = require('./routes/schedule_routes');
 
-var DB_URL = process.env.DB_URL || 'mongodb://localhost:27017/mytutor-center';
+var DB_URL = process.env.DB_URL || 'mongodb://portaltechnologics-server:xSRpupJdnSllKrIsBSCmZqgsCrBzkuTjBwMBbcFZuVQFoWM1ILsyI7s46eklIEnkRy6E2bMC1jK5ACDbWzjtzw==@portaltechnologics-server.mongo.cosmos.azure.com:10255/portaltechnologics-database?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@portaltechnologics-server@';
 mongoose.connect(DB_URL);
 
 var app = express();
@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'src')));
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {
-    const auth = {login: 'anirudh', password: 'password123'}
+    const auth = {login: 'portaltechnologics-server', password: 'frHFtTzsDnXiePXeRp6lNL4f3omNUpUpuk0zKom08myfeLiRJQIxxJEuad0eRagX9nThg0sB1tIxACDbME0weA=='}
   
     const b64auth = (req.headers.authorization || '').split(' ')[1] || ''
     const [login, password] = new Buffer(b64auth, 'base64').toString().split(':')
