@@ -9,7 +9,7 @@ var { teacherModel, packageModel, clientModel, subjectModel, scheduleModel, paym
 var paymentRoutes = require('./routes/payment_routes'),
     scheduleRoutes = require('./routes/schedule_routes');
 
-var DB_URL = process.env.DB_URL || 'mongodb://portaltechnologics-server:xSRpupJdnSllKrIsBSCmZqgsCrBzkuTjBwMBbcFZuVQFoWM1ILsyI7s46eklIEnkRy6E2bMC1jK5ACDbWzjtzw==@portaltechnologics-server.mongo.cosmos.azure.com:10255/portaltechnologics-database?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@portaltechnologics-server@';
+var DB_URL = process.env.DB_URL || 'mongodb://portaltechnologics-server:frHFtTzsDnXiePXeRp6lNL4f3omNUpUpuk0zKom08myfeLiRJQIxxJEuad0eRagX9nThg0sB1tIxACDbME0weA==@portaltechnologics-server.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@portaltechnologics-server@';
 mongoose.connect(DB_URL);
 
 var app = express();
@@ -45,4 +45,4 @@ app.all('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'))
 });
 
-app.listen(process.env.PORT || 10255, function() { console.log('express server started')});
+app.listen(process.env.PORT ||10255, function() { console.log('express server started')});
